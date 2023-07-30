@@ -1,0 +1,159 @@
+/*For all pages.*/
+
+body{
+    background-image: linear-gradient(white, rgb(200, 200, 200));
+    background-color: black;
+
+    /*These 2 properties together ensure that the background gradient
+    is for the background of the entire screen or the entire content,
+    whichever is bigger.*/
+    min-height: 100vh;
+    height: fit-content;
+
+    font-family: "Times New Roman";
+}
+button{
+    font-family: "Times New Roman";
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+
+
+/*For the loginAndCreateAccount page.*/
+
+#usernameDiv, #passwordDiv{
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+}
+#usernameInput, #passwordInput{    
+    width: 60%;
+
+    /*The input tag's background will be the background of what it
+    is on top of. opacity wouldn't work (it would just make the
+    input tag and the text typed into it see through).*/
+    mix-blend-mode: multiply;
+
+    /*The border when you click on the input.*/
+    outline: none;
+    /*The border that is around it perpetually.*/
+    border: 0px solid black;
+    border-bottom: 1px solid black;
+}
+
+#credentialsButtons{
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+}
+#loginButton{    
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#loginButton, #createAccountButton{
+    height: 5vh;
+    min-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+/*For the home page.*/
+
+#sendAnEmailDialog, #viewAnEmailDialog, #addContactDialog{
+    background-color: white;
+}
+
+#emailButtonsAndArticle{
+    margin-left: 25vw;
+    width: 70vw;
+    margin-top: 5vh;
+}
+#emailButtons{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1vh;
+    height: fit-content;
+}
+#refreshInbox, #getOldGroup{
+    margin-left: 1vw;
+}
+
+#receiverInput, #subjectInput{
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+#fileInput{
+    margin-bottom: 3px;
+}
+#bodyInput{
+    width: 70vw;
+    height: 50vh;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 15vw 30vw 20vw;
+    column-gap: 2vw;
+
+    border: .5px solid black;
+    margin-bottom: 5px;
+}
+.sender{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1vw;
+    /*this ensures that the email preview isn't smaller (regarding height)
+    than the text.*/
+    min-height: 20px;
+}
+.subject{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dt_tm{
+    text-align: right;
+    
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+sidebar{
+    width: 20vw;
+    margin-left: 3vw;
+    float: left;
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+#contactsSpan{
+    margin-top: 5vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+#addContact{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+#contactsList{
+    display: flex;
+    justify-content: center;
+}
+
+#logoutDiv{
+    display: flex;
+    justify-content: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}

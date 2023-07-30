@@ -1,0 +1,45 @@
+<div id="homePage">
+    <div id="logoutDiv">
+        <button id="logout">Logout</button>
+    </div>
+
+    <div id="sendAnEmailDialog"></div>
+    <div id="viewAnEmailDialog"></div>
+    <div id="addContactDialog"></div>
+
+    <div>
+        <div>
+            <sidebar>
+                <span id="contactsSpan">Contacts</span>
+                <div id="addContact"><button id="addContactButton">Add a Contact</button></div>
+                <div id="contactsList">
+                {% for contact in contactsList %}
+                    {{contact}}
+                    </br>
+                {% endfor %}
+
+                </div>
+            </sidebar>
+            <div>
+                <div id="emailButtonsAndArticle">
+                    <div id="emailButtons">
+                        <button id="sendEmailButton">Send an Email</button>
+                        <button id="refreshInbox">Refresh Inbox</button>
+                        <button id="getOldGroup">Get An Old Group Of Emails</button>
+                    </div>
+
+                    <article>
+                        <!--I make this article into a grid with css. each pair of 3 divs is a row.
+                        each row is an email preview. an email preview is the informaaion of who
+                        sent you the email, the subject of the email, and the date and time it was sent.
+                        You click on the preview to view the body of the email.
+                        Look at w3schools if you want to know more about grids and how i did it.-->
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="static\js\jquery-3.6.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel = "stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
