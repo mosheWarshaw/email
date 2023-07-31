@@ -3,18 +3,19 @@ import json
 from datetime import datetime
 import requests
 import os
+from dotenv import load_dotenv
 
 import mongo
 
+load_dotenv()
 app = Flask(__name__)
 GROUP_SIZE = 25
 
 #vt is an abbreviation of Virus Total.
 vtUrl = "https://www.virustotal.com/api/v3/files"
-vtApiKey = os.environ["VT_API_KEY"].getVirusTotalApiKey()
 vtHeaders = {
     "accept": "application/json",
-    "x-apikey": vtApiKey
+    "x-apikey": os.getenv("VT_API_KEY")
 }
 def sendFileToVt(uploadedFile):
     mimeType = uploadedFile.mimetype
